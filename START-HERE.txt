@@ -7,28 +7,28 @@ There are two ways to use this. Pick one.
 -------------------------------------------------------------------
 OPTION 1 — JUST OPEN IT  (no installing anything)
 -------------------------------------------------------------------
-Inside dist/ there is a single file:
+Double-click this file:
 
-    dist/raksha-bandhan.html
+    open-me/raksha-bandhan.html
 
-Double-click it. That's it — it opens in your browser and everything
-works offline. You can email it, put it on a USB stick, or send it
-to your sister as one file.
+(If you built it yourself with Option 2, the same file lands in dist/.)
 
-To add your photos, put an "images" folder NEXT TO that file:
+That's it — it opens in your browser and everything works offline. You
+can email it, put it on a USB stick, or send it to your sister as one
+file.
 
-    raksha-bandhan.html
-    images/
-        sister1.jpg
-        sister2.jpg
-        memory1.jpg
-        ...
+To add your photos, drop them into the images folder sitting next to it:
 
-(The full list of filenames is in public/images/README.md.)
+    open-me/
+        raksha-bandhan.html
+        images/     <- your photos go here
+        music/      <- optional mp3 goes here
 
-Note: this file was built with the placeholder names still in it.
-If you want to change the names or wording, use Option 2 and then
-run `npm run build:single` to make a fresh copy of this file.
+(The list of filenames is in open-me/images/README.md.)
+
+Note: this file was built with the placeholder names still in it. To
+change the names or wording, use Option 2, then run
+`npm run build:single` to make a fresh copy of this file.
 
 
 -------------------------------------------------------------------
