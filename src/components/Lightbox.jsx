@@ -57,7 +57,7 @@ export default function Lightbox({ items, index, onClose, onIndex }) {
           aria-label={item.title || "Photo"}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0, transition: { duration: 0.16 } }}
           transition={{ duration: 0.3 }}
           onClick={onClose}
           onTouchStart={(e) => (touch.current = e.touches[0].clientX)}
@@ -85,7 +85,11 @@ export default function Lightbox({ items, index, onClose, onIndex }) {
             key={index}
             initial={{ opacity: 0, scale: reduced ? 1 : 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: reduced ? 1 : 0.98 }}
+            exit={{
+              opacity: 0,
+              scale: reduced ? 1 : 0.98,
+              transition: { duration: 0.16, ease: "easeOut" },
+            }}
             transition={{ duration: reduced ? 0.15 : 0.45, ease: EASE }}
             onClick={(e) => e.stopPropagation()}
             className="flex max-h-full w-full max-w-4xl flex-col items-center gap-4"
