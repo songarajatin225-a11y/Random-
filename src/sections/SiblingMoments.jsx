@@ -4,7 +4,6 @@ import { fadeUp } from "../components/motion";
 import Reveal from "../components/Reveal";
 import T from "../components/T";
 import SectionHeading from "../components/SectionHeading";
-import { CornerFlourish } from "../components/Ornament";
 
 export default function SiblingMoments() {
   const { siblingMoments } = siteConfig;
@@ -15,7 +14,7 @@ export default function SiblingMoments() {
       <div className="shell relative">
         <SectionHeading eyebrow={siblingMoments.eyebrow} title={siblingMoments.heading} />
 
-        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {siblingMoments.cards.map((c, i) => (
             <motion.li
               key={c.label}
@@ -26,11 +25,10 @@ export default function SiblingMoments() {
               custom={(i % 3) * 0.9}
               whileHover={reduced ? undefined : { y: -6, rotate: i % 2 ? -0.5 : 0.5 }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
-              className={`card grain group p-6 sm:p-7 ${
-                i === siblingMoments.cards.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
-              }`}
+              className={`card grain p-6 sm:p-7 ${
+                i < 3 ? "lg:col-span-2" : "lg:col-span-3"
+              } ${i === siblingMoments.cards.length - 1 ? "sm:col-span-2 lg:col-span-3" : ""}`}
             >
-              <CornerFlourish className="left-3 top-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="flex items-start gap-4">
                 <motion.span
                   aria-hidden="true"

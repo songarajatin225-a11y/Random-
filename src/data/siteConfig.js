@@ -118,7 +118,7 @@ export const siteConfig = {
     cards: [
       { label: "Fighting", text: "Who started it?", glyph: "✕" },
       { label: "Food", text: "Your food somehow becomes our food.", glyph: "◕" },
-      { label: "Secrets", text: "Some things are better left between siblings.", glyph: "❦" },
+      { label: "Secrets", text: "Some things are better left between siblings.", glyph: "✧" },
       { label: "Annoying Each Other", text: "It's basically part of the job description.", glyph: "✺" },
       { label: "Support", text: "But when it matters, we've always got each other.", glyph: "❤" },
     ],
