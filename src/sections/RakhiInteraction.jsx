@@ -74,7 +74,7 @@ export default function RakhiInteraction() {
           {/* message stage — fixed min-height so nothing shifts */}
           <div
             aria-live="polite"
-            className="mt-10 flex min-h-[10rem] w-full max-w-2xl items-start justify-center px-2 text-center sm:min-h-[11rem]"
+            className="mt-8 flex min-h-[8rem] w-full max-w-2xl items-start justify-center px-2 text-center sm:min-h-[8.5rem]"
           >
             <AnimatePresence mode="wait">
               {step < 0 && (
