@@ -1,0 +1,94 @@
+FOR MY DEAREST SISTER — a Raksha Bandhan gift
+=============================================
+
+There are two ways to use this. Pick one.
+
+
+-------------------------------------------------------------------
+OPTION 1 — JUST OPEN IT  (no installing anything)
+-------------------------------------------------------------------
+Double-click this file:
+
+    open-me/raksha-bandhan.html
+
+(If you built it yourself with Option 2, the same file lands in dist/.)
+
+That's it — it opens in your browser and everything works offline. You
+can email it, put it on a USB stick, or send it to your sister as one
+file.
+
+To add your photos, drop them into the images folder sitting next to it:
+
+    open-me/
+        raksha-bandhan.html
+        images/     <- your photos go here
+        music/      <- optional mp3 goes here
+
+(The list of filenames is in open-me/images/README.md.)
+
+Note: this file was built with the placeholder names still in it. To
+change the names or wording, use Option 2, then run
+`npm run build:single` to make a fresh copy of this file.
+
+
+-------------------------------------------------------------------
+OPTION 2 — EDIT IT  (needs Node.js 20.19 or newer)
+-------------------------------------------------------------------
+    npm install
+    npm run dev        ->  open http://localhost:5173
+
+Everything you'd want to change lives in ONE file:
+
+    src/data/siteConfig.js
+
+Both names, every heading and message, photo captions, the sibling
+cards, the letter, the final sign-off and the music path are all in
+there. You never need to open a component to change wording.
+
+When you're happy:
+
+    npm run build:single    ->  dist/raksha-bandhan.html  (one file)
+    npm run build           ->  dist/  (a normal website folder)
+
+
+-------------------------------------------------------------------
+YOUR PHOTOS
+-------------------------------------------------------------------
+Drop them into  public/images/  using the names listed in
+public/images/README.md (sister1.jpg, memory1.jpg, and so on).
+
+Any photo that isn't there yet shows an elegant placeholder naming
+the exact path to add — nothing breaks, and no stock photo is ever
+substituted for yours. To use different filenames or add more, edit
+the `memories` list in siteConfig.js.
+
+Resize photos to roughly 1600px on the long edge first. It keeps the
+site fast on a phone.
+
+
+-------------------------------------------------------------------
+MUSIC  (optional)
+-------------------------------------------------------------------
+Put one mp3 at  public/music/raksha-bandhan.mp3  and a small floating
+button appears. No file, no button. It never autoplays.
+
+
+-------------------------------------------------------------------
+PUTTING IT ONLINE
+-------------------------------------------------------------------
+    npm run build
+
+Upload the dist/ folder to Netlify, Vercel, GitHub Pages or
+Cloudflare Pages. Or just upload the single raksha-bandhan.html file
+anywhere that serves files.
+
+
+-------------------------------------------------------------------
+NOTES
+-------------------------------------------------------------------
+- Mobile-first; verified from 360px upward.
+- Fully keyboard navigable. In the photo viewer: arrows move, ESC closes.
+- Respects "reduce motion" — animation collapses to simple fades and
+  the confetti is suppressed.
+- Fonts are bundled, so there are no external requests and it works
+  with no internet connection.

@@ -103,7 +103,7 @@ export default function MemoryGallery() {
               .
             </p>
             <p className="mt-3 font-mono text-[0.7rem] leading-relaxed break-all text-cream/55">
-              {missing.map((m) => m.replace("/images/", "")).join(" · ")}
+              {missing.map((m) => m.replace(/^\/?images\//, "")).join(" · ")}
             </p>
           </aside>
         )}

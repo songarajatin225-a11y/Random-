@@ -36,61 +36,61 @@ export const siteConfig = {
   */
   memories: [
     {
-      image: "/images/sister1.jpg",
+      image: "images/sister1.jpg",
       title: "A moment worth remembering",
       caption: "Some moments are simply priceless.",
       span: "tall",
     },
     {
-      image: "/images/sister2.jpg",
+      image: "images/sister2.jpg",
       title: "Always a good time",
       caption: "Wouldn't trade these for anything.",
       span: "regular",
     },
     {
-      image: "/images/memory1.jpg",
+      image: "images/memory1.jpg",
       title: "Unplanned and perfect",
       caption: "My favourite person to annoy.",
       span: "regular",
     },
     {
-      image: "/images/memory2.jpg",
+      image: "images/memory2.jpg",
       title: "That one laugh",
       caption: "Still not sure what was so funny.",
       span: "wide",
     },
     {
-      image: "/images/memory3.jpg",
+      image: "images/memory3.jpg",
       title: "Just us",
       caption: "Forever my sister, always my person.",
       span: "regular",
     },
     {
-      image: "/images/family.jpg",
+      image: "images/family.jpg",
       title: "Everyone in one frame",
       caption: "Rare, and worth it every time.",
       span: "regular",
     },
     {
-      image: "/images/rakhi.jpg",
+      image: "images/rakhi.jpg",
       title: "A thread that says a lot",
       caption: "One knot, a whole promise.",
       span: "tall",
     },
     {
-      image: "/images/photo1.jpg",
+      image: "images/photo1.jpg",
       title: "Somewhere, sometime",
       caption: "Always a good time with you.",
       span: "regular",
     },
     {
-      image: "/images/photo2.jpg",
+      image: "images/photo2.jpg",
       title: "Caught mid-sentence",
       caption: "You never let me finish. ❤️",
       span: "regular",
     },
     {
-      image: "/images/photo3.jpg",
+      image: "images/photo3.jpg",
       title: "To be continued",
       caption: "More memories to come...",
       span: "wide",
@@ -170,10 +170,10 @@ export const siteConfig = {
     signOff: "— Your annoying but favourite brother 😄",
     /* Photos for the closing montage. Uses the gallery photos by default. */
     montage: [
-      "/images/sister1.jpg",
-      "/images/memory2.jpg",
-      "/images/photo1.jpg",
-      "/images/rakhi.jpg",
+      "images/sister1.jpg",
+      "images/memory2.jpg",
+      "images/photo1.jpg",
+      "images/rakhi.jpg",
     ],
   },
 
@@ -182,7 +182,7 @@ export const siteConfig = {
      If the file isn't there, the button quietly hides itself.
   */
   music: {
-    path: "/music/raksha-bandhan.mp3",
+    path: "music/raksha-bandhan.mp3",
     label: "Background music",
     volume: 0.35,
   },
