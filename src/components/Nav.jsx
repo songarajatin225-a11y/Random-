@@ -64,9 +64,15 @@ export default function Nav({ visible }) {
           transition={{ duration: 0.6, ease: EASE }}
           className="fixed inset-x-0 top-0 z-50"
         >
+          {/* Mobile: a soft scrim so page copy never collides with the bar. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-[linear-gradient(180deg,rgba(20,6,11,0.94),rgba(20,6,11,0.6)_55%,transparent)] md:hidden"
+          />
+
           <nav
             aria-label="Sections"
-            className="mx-auto flex max-w-[74rem] items-center justify-between gap-3 px-4 py-3 md:justify-center md:py-5"
+            className="relative mx-auto flex max-w-[74rem] items-center justify-between gap-3 px-4 py-3 md:justify-center md:py-5"
           >
             {/* Desktop pill */}
             <ul className="hidden items-center gap-1 rounded-full border border-gold-soft/18 bg-maroon-950/65 px-2 py-1.5 shadow-[0_18px_40px_-28px_rgba(0,0,0,0.9)] backdrop-blur-xl md:flex">

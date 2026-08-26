@@ -116,7 +116,7 @@ export default function Lightbox({ items, index, onClose, onIndex }) {
             className="mt-5 flex items-center gap-5"
           >
             <NavBtn dir={-1} onClick={() => step(-1)} label="Previous photo" />
-            <span className="font-mono text-[0.7rem] tracking-[0.2em] text-cream/45">
+            <span className="font-mono text-[0.7rem] tracking-[0.2em] text-cream/65">
               {String(index + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
             </span>
             <NavBtn dir={1} onClick={() => step(1)} label="Next photo" />

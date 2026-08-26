@@ -75,10 +75,10 @@ export default function App() {
       {opened && (
         <footer className="relative overflow-hidden border-t border-gold-soft/10 px-5 py-12 text-center">
           <Divider />
-          <p className="mt-6 text-[0.68rem] tracking-[0.26em] text-cream/35 uppercase">
+          <p className="mt-6 text-[0.68rem] tracking-[0.26em] text-cream/55 uppercase">
             Made with love by {siteConfig.brotherName}
           </p>
-          <p className="mt-2 text-[0.68rem] tracking-[0.26em] text-gold-soft/40 uppercase">
+          <p className="mt-2 text-[0.68rem] tracking-[0.26em] text-gold-soft/70 uppercase">
             Raksha Bandhan
           </p>
         </footer>

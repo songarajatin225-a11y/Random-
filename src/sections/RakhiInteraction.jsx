@@ -77,6 +77,26 @@ export default function RakhiInteraction() {
             className="mt-10 flex min-h-[10rem] w-full max-w-2xl items-start justify-center px-2 text-center sm:min-h-[11rem]"
           >
             <AnimatePresence mode="wait">
+              {step < 0 && (
+                <motion.span
+                  key="waiting"
+                  aria-hidden="true"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="mt-6 flex items-center gap-2.5"
+                >
+                  {[0, 1, 2].map((i) => (
+                    <motion.span
+                      key={i}
+                      animate={reduced ? {} : { opacity: [0.2, 0.7, 0.2] }}
+                      transition={{ duration: 2.4, delay: i * 0.35, repeat: Infinity, ease: "easeInOut" }}
+                      className="h-1 w-1 rounded-full bg-gold-soft/50"
+                    />
+                  ))}
+                </motion.span>
+              )}
               {step >= 0 && (
                 <motion.p
                   key={step}

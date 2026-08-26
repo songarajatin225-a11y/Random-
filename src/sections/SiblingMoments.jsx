@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { siteConfig } from "../data/siteConfig";
-import { EASE, fadeUp } from "../components/motion";
+import { fadeUp } from "../components/motion";
 import Reveal from "../components/Reveal";
 import T from "../components/T";
 import SectionHeading from "../components/SectionHeading";
@@ -38,7 +38,7 @@ export default function SiblingMoments() {
                   transition={{ duration: 5 + i, repeat: Infinity, ease: "easeInOut" }}
                   className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold-soft/25 bg-maroon-900/60 text-lg text-gold-soft"
                 >
-                  {c.glyph}
+                  <T heart="text-rose">{c.glyph}</T>
                 </motion.span>
                 <div>
                   <h3 className="font-sans text-[0.68rem] font-medium tracking-[0.24em] text-gold-soft/85 uppercase">

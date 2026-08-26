@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { siteConfig } from "../data/siteConfig";
-import { EASE, scaleIn } from "../components/motion";
+import { scaleIn } from "../components/motion";
 import Photo from "../components/Photo";
 import Reveal from "../components/Reveal";
 import T from "../components/T";
@@ -102,7 +102,7 @@ export default function MemoryGallery() {
               </code>
               .
             </p>
-            <p className="mt-3 font-mono text-[0.7rem] leading-relaxed break-all text-cream/35">
+            <p className="mt-3 font-mono text-[0.7rem] leading-relaxed break-all text-cream/55">
               {missing.map((m) => m.replace("/images/", "")).join(" · ")}
             </p>
           </aside>

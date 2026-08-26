@@ -36,7 +36,7 @@ export default function BondSection() {
 
         <Reveal delay={0.3} className="mx-auto mt-16 flex max-w-xs items-center justify-center gap-3">
           <span className="hairline flex-1" />
-          <span className="text-xs tracking-[0.3em] text-gold-soft/60 uppercase">est. always</span>
+          <span className="text-xs tracking-[0.3em] text-gold-soft/80 uppercase">est. always</span>
           <span className="hairline flex-1" />
         </Reveal>
       </div>

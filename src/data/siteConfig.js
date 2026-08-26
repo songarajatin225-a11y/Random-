@@ -116,7 +116,7 @@ export const siteConfig = {
     eyebrow: "Still Us",
     heading: "Because We're Still Us 😂",
     cards: [
-      { label: "Fighting", text: "Who started it?", glyph: "⚔" },
+      { label: "Fighting", text: "Who started it?", glyph: "✕" },
       { label: "Food", text: "Your food somehow becomes our food.", glyph: "◕" },
       { label: "Secrets", text: "Some things are better left between siblings.", glyph: "❦" },
       { label: "Annoying Each Other", text: "It's basically part of the job description.", glyph: "✺" },

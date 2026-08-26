@@ -10,11 +10,6 @@ export const fadeUp = {
   }),
 };
 
-export const fadeIn = {
-  hidden: { opacity: 0 },
-  show: (i = 0) => ({ opacity: 1, transition: { duration: 1, delay: i * 0.12, ease: EASE } }),
-};
-
 export const scaleIn = {
   hidden: { opacity: 0, scale: 0.94 },
   show: (i = 0) => ({
@@ -23,12 +18,6 @@ export const scaleIn = {
     transition: { duration: 0.9, delay: i * 0.1, ease: EASE },
   }),
 };
-
-/* Container that staggers its children. */
-export const stagger = (gap = 0.12, delay = 0) => ({
-  hidden: {},
-  show: { transition: { staggerChildren: gap, delayChildren: delay } },
-});
 
 /* Flattened variants for prefers-reduced-motion. */
 export const still = {

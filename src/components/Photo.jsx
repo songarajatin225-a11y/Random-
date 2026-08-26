@@ -44,9 +44,9 @@ export default function Photo({
             <path d="M4 17.2 9.4 12l3.4 3.2L16.6 11 20 14.6" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
           </svg>
           {showHint && (
-            <p className="font-sans text-[0.62rem] leading-relaxed tracking-[0.14em] text-cream/45 uppercase">
+            <p className="font-sans text-[0.62rem] leading-relaxed tracking-[0.14em] text-cream/60 uppercase">
               Add your photo
-              <span className="mt-1 block font-mono text-[0.6rem] tracking-normal normal-case text-gold-soft/60 break-all">
+              <span className="mt-1 block font-mono text-[0.6rem] tracking-normal normal-case text-gold-soft/80 break-all">
                 public{src}
               </span>
             </p>

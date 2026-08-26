@@ -102,7 +102,7 @@ export default function Hero({ opened, onOpen }) {
         <motion.p
           variants={rise}
           custom={2.7}
-          className="mt-6 text-[0.7rem] tracking-[0.2em] text-cream/35 uppercase"
+          className="mt-6 text-[0.7rem] tracking-[0.2em] text-cream/55 uppercase"
         >
           Made for {sisterName}
         </motion.p>
@@ -116,7 +116,7 @@ export default function Hero({ opened, onOpen }) {
         aria-hidden={!opened}
         className="absolute inset-x-0 bottom-7 z-10 flex flex-col items-center gap-2"
       >
-        <span className="text-[0.62rem] tracking-[0.28em] text-cream/45 uppercase">
+        <span className="text-[0.62rem] tracking-[0.28em] text-cream/65 uppercase">
           {hero.scrollHint}
         </span>
         <motion.span
