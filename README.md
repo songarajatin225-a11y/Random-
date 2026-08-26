@@ -6,12 +6,25 @@ and a celebration at the end.
 
 ## Run it
 
+Needs Node.js 20.19+.
+
 ```bash
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # production build in dist/
-npm run preview  # preview the built site
+npm run dev           # http://localhost:5173
+npm run build         # production build in dist/
+npm run build:single  # dist/raksha-bandhan.html — one self-contained file
+npm run preview       # preview the built site
 ```
+
+### One file you can just open
+
+`npm run build:single` inlines the script, styles and fonts into a single
+`dist/raksha-bandhan.html`. Double-click it and it works — offline, from a USB
+stick, or as an email attachment. A normal build can't do this: browsers refuse
+to load separate JS/CSS files from a `file://` page, so `dist/index.html` shows
+a blank screen unless it's served over HTTP.
+
+Keep an `images/` folder beside the file to supply photos.
 
 ## Make it yours
 
@@ -39,7 +52,8 @@ button appears. No file, no button. It never autoplays.
 ## Deploy
 
 Static output — `npm run build`, then upload `dist/` anywhere (Netlify, Vercel,
-GitHub Pages, Cloudflare Pages).
+GitHub Pages, Cloudflare Pages). Asset paths are relative, so it works from a
+sub-path too.
 
 ## Built with
 
@@ -53,13 +67,15 @@ src/
   data/siteConfig.js      ← the only file you need to edit
   styles/index.css        design tokens, type scale, surfaces
   components/             Nav, MusicToggle, Lightbox, Photo, Particles,
-                          RakhiGraphic, Reveal, Ornament, celebrate
+                          RakhiGraphic, Reveal, Ornament, T, celebrate
   sections/               Hero, BondSection, MemoryGallery,
                           AppreciationSection, SiblingMoments, OneThing,
                           RakhiInteraction, LetterSection, FinalSurprise
 public/
   images/                 your photos
   music/                  optional background track
+scripts/
+  build-single.mjs        bundles dist/ into one openable .html
 ```
 
 ## Notes

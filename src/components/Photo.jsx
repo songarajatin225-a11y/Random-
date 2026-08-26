@@ -47,7 +47,7 @@ export default function Photo({
             <p className="font-sans text-[0.62rem] leading-relaxed tracking-[0.14em] text-cream/60 uppercase">
               Add your photo
               <span className="mt-1 block font-mono text-[0.6rem] tracking-normal normal-case text-gold-soft/80 break-all">
-                public{src}
+                {`public/${src.replace(/^\//, "")}`}
               </span>
             </p>
           )}
