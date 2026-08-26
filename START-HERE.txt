@@ -30,6 +30,9 @@ Note: this file was built with the placeholder names still in it. To
 change the names or wording, use Option 2, then run
 `npm run build:single` to make a fresh copy of this file.
 
+The open-me folder plays no part in deploying — delete it before
+uploading to GitHub if you'd rather keep the repository tidy.
+
 
 -------------------------------------------------------------------
 OPTION 2 — EDIT IT  (needs Node.js 20.19 or newer)
@@ -74,14 +77,40 @@ button appears. No file, no button. It never autoplays.
 
 
 -------------------------------------------------------------------
-PUTTING IT ONLINE
+PUTTING IT ON THE INTERNET  (free, via GitHub Pages)
 -------------------------------------------------------------------
-    npm run build
+This project already contains the deploy setup, so GitHub does the
+building for you. You only have to flip one switch.
 
-Upload the dist/ folder to Netlify, Vercel, GitHub Pages or
-Cloudflare Pages. Or just upload the single raksha-bandhan.html file
-anywhere that serves files.
+1. Add your photos to  public/images/  FIRST, and edit
+   src/data/siteConfig.js with the real names. (You can do this later
+   and re-upload, but it's easier now.)
 
+2. Put these files in a GitHub repository.
+   - Easiest: on GitHub, create a new repository, then use
+     "Add file" -> "Upload files" and drag in everything from this
+     folder.
+   - Do NOT upload the  node_modules  or  dist  folders if you have
+     them. Nothing else needs excluding.
+   - Make sure the hidden  .github  folder comes along — it holds the
+     deploy instructions. If your file manager hides dotted folders,
+     turn on "show hidden files". Without it, nothing will deploy.
+
+3. In the repository: Settings -> Pages -> under "Build and
+   deployment", set Source to  GitHub Actions.
+
+4. That's it. Every push to the main branch rebuilds and republishes.
+   Watch progress in the "Actions" tab. The first run takes ~2 minutes.
+
+5. Your site will be at:
+       https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+   The exact link is shown in Settings -> Pages when it's live.
+
+If the Actions tab shows nothing, the .github folder didn't upload —
+re-upload it and the deploy will start.
+
+Other hosts work too: run `npm run build` and drag the dist/ folder
+onto Netlify or Cloudflare Pages. No configuration needed.
 
 -------------------------------------------------------------------
 NOTES

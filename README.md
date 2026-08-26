@@ -51,9 +51,19 @@ button appears. No file, no button. It never autoplays.
 
 ## Deploy
 
-Static output — `npm run build`, then upload `dist/` anywhere (Netlify, Vercel,
-GitHub Pages, Cloudflare Pages). Asset paths are relative, so it works from a
-sub-path too.
+### GitHub Pages (already wired up)
+
+`.github/workflows/deploy.yml` builds and publishes on every push to `main`.
+One-time setup: **Settings → Pages → Build and deployment → Source: GitHub
+Actions**. The site lands at `https://<user>.github.io/<repo>/`.
+
+`base: './'` in `vite.config.js` keeps asset URLs relative, so the same build
+works at a domain root, inside a Pages project sub-path, and from disk.
+
+### Anywhere else
+
+`npm run build`, then drop `dist/` on Netlify, Vercel or Cloudflare Pages. No
+configuration needed.
 
 ## Built with
 

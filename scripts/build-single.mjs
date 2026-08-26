@@ -26,7 +26,7 @@ let html = readFileSync(join(DIST, "index.html"), "utf8");
 /* Fonts must travel with the file — data: is one of the few schemes a
    file:// page is allowed to fetch. */
 let fontCount = 0;
-css = css.replace(/url\(["']?\/?fonts\/([\w.-]+\.woff2)["']?\)/g, (_m, name) => {
+css = css.replace(/url\(["']?[^)"']*?fonts\/([\w.-]+\.woff2)["']?\)/g, (_m, name) => {
   const b64 = readFileSync(join(DIST, "fonts", name)).toString("base64");
   fontCount += 1;
   return `url(data:font/woff2;base64,${b64})`;
@@ -46,9 +46,17 @@ html = html
     () => `\n    <script type="module">${inlineJs}</script>`
   );
 
-if (/<script[^>]*\ssrc=/.test(html) || /<link[^>]+rel="stylesheet"/.test(html)) {
-  throw new Error("Inlining failed — an external asset reference survived.");
+/* Guard every asset kind: a silent miss here ships a file that looks fine
+   but quietly falls back to system fonts, or renders blank. */
+const leftovers = [
+  [/<script[^>]*\ssrc=/, "a <script src>"],
+  [/<link[^>]+rel="stylesheet"/, "a stylesheet <link>"],
+  [/url\(["']?[^)"']*?fonts\//, "a font url()"],
+];
+for (const [re, what] of leftovers) {
+  if (re.test(html)) throw new Error(`Inlining failed — ${what} survived.`);
 }
+if (fontCount === 0) throw new Error("Inlining failed — no fonts were embedded.");
 
 writeFileSync(OUT, html);
 
