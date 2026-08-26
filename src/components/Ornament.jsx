@@ -43,19 +43,17 @@ export function CornerFlourish({ className = "", flip = false, tone = "text-gold
   return (
     <svg
       aria-hidden="true"
-      viewBox="0 0 48 48"
-      className={`pointer-events-none absolute h-11 w-11 ${tone} ${className}`}
+      viewBox="0 0 32 32"
+      className={`pointer-events-none absolute h-10 w-10 ${tone} ${className}`}
       style={flip ? { transform: "scaleX(-1)" } : undefined}
       fill="none"
       stroke="currentColor"
       strokeWidth="1"
       strokeLinecap="round"
     >
-      <path d="M1 1h30M1 1v30" opacity="0.55" />
-      <path d="M6 6h16M6 6v16" opacity="0.9" />
-      <path d="M6 22c9 0 16-7 16-16" opacity="0.55" />
-      <path d="M22 22c0-6-4-10-10-10" opacity="0.35" />
-      <circle cx="14" cy="14" r="1.6" fill="currentColor" stroke="none" />
+      <path d="M2 22V6a4 4 0 0 1 4-4h16" />
+      <path d="M2 22C13 22 22 13 22 2" opacity="0.4" />
+      <circle cx="9" cy="9" r="1.3" fill="currentColor" stroke="none" opacity="0.75" />
     </svg>
   );
 }
