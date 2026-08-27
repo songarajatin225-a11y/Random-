@@ -3,3 +3,6 @@ dist
 .DS_Store
 *.local
 .vite
+
+# Editor data — content and uploaded photos are per-deployment, not source
+data/

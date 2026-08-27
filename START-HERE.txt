@@ -77,6 +77,48 @@ button appears. No file, no button. It never autoplays.
 
 
 -------------------------------------------------------------------
+OPTION 3 — EDIT IT FROM A WEB PAGE  (password protected)
+-------------------------------------------------------------------
+There is a small built-in editor. Sign in with a password and you
+can change every piece of text and upload photos from the browser,
+with no code and no rebuilding.
+
+    npm install
+    npm run build
+    ADMIN_PASSWORD="a long passphrase" npm start
+
+Then open:
+
+    http://localhost:3000/          the site
+    http://localhost:3000/admin/    the editor
+
+READ THIS BIT — it matters:
+
+This editor needs a real server. It will NOT work on GitHub Pages,
+on Netlify Drop, or by opening a file. Those only serve files; there
+is nothing there to run the editor.
+
+The site itself still works fine on all of them — it just uses the
+text built into it, exactly as before. The editor is an extra, not a
+replacement.
+
+To put the editor online, use a host that runs Node: Render, Railway
+or Fly.io. A render.yaml is included for Render.
+
+ALSO IMPORTANT: on free hosting plans, anything you save through the
+editor is erased whenever the site redeploys or restarts. That is how
+free plans work — they don't keep files. Two ways round it:
+
+  - Attach a persistent disk (usually a paid plan) and set DATA_DIR
+    to its folder, or
+  - Use the editor to get the wording right, then copy the final text
+    into src/data/siteConfig.js so it is built into the site for good.
+
+If you forget the password, change ADMIN_PASSWORD and restart.
+Eight wrong guesses locks sign-in for 15 minutes.
+
+
+-------------------------------------------------------------------
 PUTTING IT ON THE INTERNET  (free, via GitHub Pages)
 -------------------------------------------------------------------
 This project already contains the deploy setup, so GitHub does the

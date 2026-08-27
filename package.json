@@ -7,11 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "build:single": "vite build && node scripts/build-single.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server/index.js",
+    "server": "npm run build && node server/index.js"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
+    "express": "^5.2.1",
     "framer-motion": "^13.1.1",
+    "multer": "^2.2.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },

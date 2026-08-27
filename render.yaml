@@ -1,0 +1,20 @@
+# One-click deploy config for Render (render.com).
+#
+# IMPORTANT: the free plan has an ephemeral filesystem — edits and uploaded
+# photos are wiped on every redeploy and on idle restarts. To keep them, add
+# a persistent disk (paid plan) and point DATA_DIR at its mount path. See the
+# "Keeping your edits" section of the README.
+services:
+  - type: web
+    name: raksha-bandhan
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false          # you type this in the Render dashboard
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: NODE_ENV
+        value: production
